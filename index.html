@@ -4,13 +4,30 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Questions about life</title>
   <meta name="description" content="">
   <meta name="author" content="">
 </head>
 
 <body> 
- <p>Hello World!</p>
+  <div>
+    <button type="randomQuestion" onclick="findRandomQuestion()">Random Question</button>
+    <input name="randomQuestion" id="randomQuestion">
+  </div>
+  <script>
+    var questions = Array(
+      "What is the meaning of life?", 
+      "What is 6 * 7?",
+      "Is there a perfect number?", 
+      "Number of bridges to cross times one of devil's numbers?",
+      "Is this real life?",
+      "Never gonna give you up.");
+
+    function findRandomQuestion() {
+      var randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+      document.getElementById('randomQuestion').value = randomQuestion;
+    }
+  </script>
 </body>
 
 </html>
