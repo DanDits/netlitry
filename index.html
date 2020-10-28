@@ -12,7 +12,7 @@
 <body> 
   <div>
     <button type="randomQuestion" onclick="findRandomQuestion()">Random Question</button>
-    <input name="randomQuestion" id="randomQuestion">
+    <div id="randomQuestion">
   </div>
   <script>
     var questions = Array(
@@ -25,7 +25,7 @@
 
     function findRandomQuestion() {
       var randomQuestion = questions[Math.floor(Math.random() * questions.length)];
-      document.getElementById('randomQuestion').value = randomQuestion;
+      document.getElementById('randomQuestion').innerHTML = randomQuestion;
     }
   </script>
 </body>
